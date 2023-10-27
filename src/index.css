@@ -1,13 +1,161 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #0d1117;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.app-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: auto 0;
+}
+.shopping-list-container {
+  align-self: center;
+  justify-self: center;
+}
+.shopping-list {
+  width: 438px;
+  height: 653px;
+  border-radius: 30px;
+  background: linear-gradient(
+    112deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.1) 73.15%
+  );
+  box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  position: relative;
+  overflow: hidden;
+}
+.shopping-list > span {
+  display: inline-block;
+}
+.top-left {
+  position: absolute;
+  top: -41px;
+  left: -85px;
+  border-radius: 50%;
+  fill: #ffecf5;
+  filter: blur(100px);
+}
+.bottom-left {
+  position: absolute;
+  left: -12px;
+  bottom: -22px;
+  z-index: -1;
+  fill: #8600ff;
+}
+.bottom-center {
+  position: absolute;
+  bottom: -38px;
+  z-index: -2;
+}
+.bottom-right {
+  position: absolute;
+  bottom: -42px;
+  right: 0;
+  z-index: 1;
+  fill: #f00;
+}
+.heading {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 19px;
+}
+.inputs {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+}
+.title-input {
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  width: 192px;
+  height: 35px;
+  flex-shrink: 0;
+  border: none;
+  padding: 6px 9px;
+  color: rgba(33, 33, 33, 0.7);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18.22px;
+  font-style: normal;
+  font-weight: 300;
+}
+.value-input {
+  border: none;
+  width: 64px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.6);
+}
+.button {
+  border-radius: 5px;
+  border: 2px solid var(--Gold, #ffd700);
+  color: #ffd700;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 6px 30px 5px 29px;
+}
+ul {
+  margin: 0 30px;
+  margin-top: 49px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffd700;
+  padding-bottom: 6px;
+  padding-left: 21px;
+}
+.item-number {
+  border-radius: 3px;
+  background: var(--Gold, #ffd700);
+  color: #000;
+  text-align: center;
+  font-family: Calibri;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 5px 7px;
+}
+.item-title {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Calibri;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.item-icon {
+  align-self: center;
+  justify-self: center;
+}
+p {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  column-gap: 15px;
 }
